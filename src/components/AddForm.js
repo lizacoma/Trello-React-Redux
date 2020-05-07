@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
- const AddForm = (props) => {
+ export const AddForm = (props) => {
 
     const [text, setText] = useState('');
 
@@ -21,9 +21,7 @@ import React, { useState } from 'react';
                     onChange = {handleChange} 
                 /> 
                 <button onClick = {handleSubmit}>add</button>
-   
         </div>
     )
-}
+};
 
-export default AddForm();

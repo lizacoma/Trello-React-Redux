@@ -13,8 +13,8 @@ const Board = (props) => {
              <Column title = {column.title}/>
              )
           )}
-          <Column/>
-          
+          <Column/>  
+
         </section>
     )
 }

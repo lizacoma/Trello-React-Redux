@@ -26,7 +26,7 @@ const Column = (props) => {
             onSubmit = {addColumn}
             />
         </section>
-    )
+    );
 };
 
 const mapStateToProps = state => {
@@ -42,6 +42,4 @@ const mapDispatchToProps = dispatch => {
     };
   };
 
-export default 
-// connect(mapStateToProps, mapDispatchToProps)
-Column;
+export default connect(mapStateToProps, mapDispatchToProps) (Column);
