@@ -32,4 +32,4 @@ const mapDispatchToProps = dispatch => {
     };
   };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Board);
+export default connect(mapStateToProps, mapDispatchToProps) (Board);
