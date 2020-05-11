@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addNewColumn } from '../redux/actions/columns'
-import { Column } from './Column';
+import { addNewColumn } from '../redux/actions/objects'
+import Column from './Column';
 
 const Board = (props) => {
   
-  const {allColumns, state} = props;
-  console.log('state: ', allColumns);
+  const {allColumns} = props;
+ 
     return (
         <section className = 'board-wrapper'>
+          {console.log('allColumns: ', allColumns)} 
           {allColumns.map((column) => (
-             <Column title = {column.title}/>
+             <Column key = {column.id} column = {column}/>
              )
           )}
-          <Column/>  
+
+          <Column/>
 
         </section>
     )
-}
+};
 
 const mapStateToProps = state => {
     return {
         state,
-        allColumns: state.stateColumsReducer
+        allColumns: state.stateReducer.board
     };
   };
   

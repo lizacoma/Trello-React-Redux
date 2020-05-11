@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { stateColumsReducer } from './columns';
+import { stateReducer } from './objects';
 
 const rootReducer = combineReducers({
-    stateColumsReducer
+    stateReducer
 });
 
 export default rootReducer;

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
- export const AddForm = (props) => {
+ const AddForm = (props) => {
 
     const [text, setText] = useState('');
+    const { placeholder, className, rows } = props;
 
     const handleChange = event => {
         setText(event.target.value)
@@ -16,12 +17,17 @@ import React, { useState } from 'react';
 
     return (
         <div className = 'form-wrapper'>
-            <input  name = 'text' 
+            <input name = 'text' 
+                    className = {className}
                     value = {text} 
+                    placeholder = {placeholder}
+                    rows = {rows}
                     onChange = {handleChange} 
                 /> 
                 <button onClick = {handleSubmit}>add</button>
         </div>
     )
 };
+
+export default AddForm;
 

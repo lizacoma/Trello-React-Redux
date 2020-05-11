@@ -6,14 +6,22 @@ import { createStore } from 'redux';
 
 import rootReducer from './redux/reducers/rootReducer';
 
-
-
 class App extends Component {
  
 render() {
+
+  const persistedState = localStorage.getItem('board') 
+  ? JSON.parse(localStorage.getItem('board'))
+  : {};
+
   const store = createStore(
-    rootReducer
+    rootReducer,
+    persistedState
 );
+
+store.subscribe(()=>{
+  localStorage.setItem('board', JSON.stringify(store.getState()));
+});
 
   return (
       <div className = 'App'>
