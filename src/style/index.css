@@ -5,88 +5,147 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    overflow: scroll;
 }
 
 .board-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  
+    margin: 0;
 }
+
 .column-wrapper {
-    margin: 1%;
-    padding: 10px;
-    width: 10%;
+    min-width: 13%;
 
     background:#001fff2e;
     border: none;
-    border-radius: 7px;
 }
 
-/* .column-wrapper h3 {
-   
-} */
-
-.form-wrapper {
-    display: flex;
-    flex-direction: column;
+.new-column-wrapper {
+    background:#001fff2e;
+    border: none;
 }
 
-input {
-    padding: 8px;
-    font-size: 15px;
-    border: 1px solid #2700ff61;
-    border-radius: 3px;
+button:hover {
+    background: #001fff66;
+    color: black;
 }
 
-button {
-    margin-top: 3%;
-    padding: 3%;
+button:hover button i {
+    color: black;
+}
 
+i {
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.title i:hover {
+    color: #4c00c373;
+}
+
+.title p {
+    cursor: pointer;
+}
+
+.column-wrapper, .task-wrapper i, .title i, button{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+} 
+
+.form-wrapper button {
     background: #001fff2e;
     color: white;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
-    border-radius: 3px;
 }
 
-.title-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 2% 3%;
-    background: #001fff1f;
-    color: white;
-    text-transform: capitalize;
-    
-    border-radius: 3px;
-}
-
-.task-input {
-    display: flex;
-    flex-direction: column;
-}
-
-.task-input input {
-    /* rows: 5; */
-}
-
-.all-tasks-wrapper {
-    margin: 10% 0;
+.form-wrapper .button-wrapper .close-button:hover {
+    color: black;
 }
 
 .task-wrapper {
-    margin: 10px 0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
     background: #ffffffc2;
-
-    border-radius: 3px;
-    box-shadow:  0px 3px 7px rgba(62, 62, 62, 0.24);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
-.close-button {
-    width: 20px;
+.task-wrapper:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px #4c00c3b5;
+}
+
+.task-wrapper i {
+    color: #4c00c385;
+}
+
+.task-wrapper i:hover {
+    color: #4c00c3cf;
+}
+
+.task-content i.edit {
+    padding: 10px 0;
+}
+
+.modal {
+    display: block;
+}
+
+.modal-content {
+    min-height: 400px;
+    cursor: auto;
+}
+
+.modal-header .title {
+    padding-top: 0;
+}
+
+.modal-content i {
+    font-size: 18px;
+    padding-right: 5px;
+    color: #4c00c3a1;
+    opacity: 1;
+}
+
+ .modal-content i:hover {
+    color: #4c00c3bf;
+}
+
+.modal-header .modal-title .title {
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.modal-title span {
+    font-size: 14px;
+    color: #4c00c3a1;
+    cursor: default;
+}
+
+.modal-title .column-name {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.modal-title .form-wrapper {
+    margin-right: 15px;
+}
+
+.modal-body .form-wrapper .close-button i {
+    color: white;
+}
+
+.form-wrapper .close-button:hover i {
+    color: black;
+}
+
+i.delete {
+    margin-top: -1px;
+}
+
+.hidden-background {
+    position: absolute;
+    z-index: 1;
+}
+
+.modal-window-wrapper {
+    z-index: 100;
 }

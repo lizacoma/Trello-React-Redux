@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { stateReducer } from './objects';
+import { stateReducer } from './columns';
 
 const rootReducer = combineReducers({
     stateReducer
